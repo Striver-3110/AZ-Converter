@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from 'react'
 import { CurrencyContext } from '../context/CurrencyContext'
 import axios from 'axios'
 function InputAmount () {
-  console.log(import.meta.env.VITE_API_KEY)
+  // console.log(import.meta.env.VITE_API_KEY)
   const {
     amount,
     setAmount,
