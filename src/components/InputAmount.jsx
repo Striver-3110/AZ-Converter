@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react'
 import { CurrencyContext } from '../context/CurrencyContext'
 import axios from 'axios'
 function InputAmount () {
+  console.log(import.meta.env.VITE_API_KEY)
   const {
     amount,
     setAmount,
@@ -25,7 +26,7 @@ function InputAmount () {
     try {
       const fetchData = async () => {
         const response = await axios(
-          'https://api.currencyapi.com/v3/latest?apikey=cur_live_W0usX8TDDN97eA1y3R7TrxwCzS7i2mhCEcnTzwX2',
+          `https://api.currencyapi.com/v3/latest?apikey=${import.meta.env.VITE_API_KEY}`,
           {
             params: {
               base_currency: base_currency,
